@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOKU WIP</title>
+        
+        <link rel="stylesheet" href="style.css" />
+        
+        <!-- Three.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"></script>
+        
+        <!-- GLTFLoader for loading .gltf/.glb models -->
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r108/examples/js/loaders/GLTFLoader.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r108/examples/js/controls/OrbitControls.js"></script>
+
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="canvas-container"></div>
+
+        <video id="avatar" src="render10001-0192.mp4" autoplay="autoplay" loop="loop" disablepictureinpicture
+  controlslist="nofullscreen noremoteplayback noplaybackrate"></video>
+
+        <img src="images/mp3-player-body.png" id="mp3player">
+        <img src="images/mp3-player-screen.png" id="mp3screen">
+        <img src="images/mp3-player-scroller.png" id="mp3scroller">
+        <img src="images/mp3-player-smiley.png" id="mp3smiley">
+
+        <img src="images/sound-off.png" id="soundoff">
+        <img src="images/question-mark.png" id="questionm">
+
+        <img src="images/note-1.png" id="note1" class="notes">
+        <img src="images/ok.png" id="ok1" class="ok">
+
+        <img src="images/note-2.png" id="note2" class="notes">
+        <img src="images/ok.png" id="ok2" class="ok">
+
+        <div id="listborder">
+            <div class="mp3menu">
+                 <a href="subsites/drawingalgo.html">01_Drawing Algorithms</a>
+                 <a href="subsites/variablesparam.html">02_Variables + Parameters</a>
+                 <a href="subsites/gridsmodules.html">03_Grids + Modules</a>
+                 <a href="subsites/digitaldrawingtools.html">04_Digital Drawing Tools</a>
+                 <a href="subsites/toolsprint.html">05_Tools + Print</a>
+                 <a href="subsites/dokuprozess.html">06_Doku Prozess</a>
+                 <a href="subsites/semesterreflexion.html">07_Semesterreflexion</a>
+            </div>
+        </div>
+
+        <audio id="startupmp3" src="audio/sound%20effect%20sorgenfresser.mp3"></audio>
+        <audio id="bgm" src="audio/New_Project%20(1).mp3" autoplay="autoplay" loop="loop" gapless loop></audio>
+        <audio id="oksfx" src="audio/paper3.mp3">  </audio>
+        <audio id="menuhover" src="audio/click2.mp3">  </audio>
+        <audio id="menuenter" src="audio/bling1.mp3">  </audio>
+        <audio id="homebtnsfx" src="audio/reverse1.mp3">  </audio>
+
+        <div id="info1"> 
+            <p> ? </p>
+        </div>
+
+        <div id="txt2">
+            <p> Die 3D Objekte sind Objekte, aus der <br> Heimatstadt meiner Mama, Chengdu, in China.
+             <br> Bei meinem letzten Besuch habe ich ein paar <br> fotografiert, die besonders
+                viel für mich <br> bedeuten. Darunter sind ein klappriger <br> Ventilator aus der Kindheit,
+                und ein Namensbild <br> das ein Straßenkünstler malte, als ich ganz <br> klein war.
+                Aber sonst ist da auch eine <br> besonders schöne Packung Zigaretten, <br>
+                rostige Tür und ein Zettel, der über den <br> Abriss der Wohnung meines Opis
+                informiert. <br> In der Waschmaschine ist das <br> Haustürschloss von ihm. 
+            </p>
+        </div>
+
+    </body>
+
+    <footer>
+    
+        <p id="credits">*ੈ✩‧₊˚༺ Mia Goetze 80222 ☆ VK:Semester:1 ☆ Digitale Grundlagen ༻*ੈ✩‧₊˚</p>
+    </footer>

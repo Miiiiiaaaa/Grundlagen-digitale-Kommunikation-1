@@ -1,0 +1,378 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+body {
+  cursor: url('images/wii-pointer-ccw.cur'), auto; 
+  overflow-x: hidden;
+}
+
+#headicon {
+  position: absolute;
+  top: 420px;
+  left: 10px;
+  width: 30%;
+  height: auto;
+  z-index: 2;
+}
+
+#mp3player {
+  position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50%;
+    height: auto;
+    z-index: 5;
+}
+
+#mp3screen {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50%;
+  height: auto;
+  z-index: 5;
+}
+
+
+#mp3scroller {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50%;
+  height: auto;
+  z-index: 5;
+}
+
+#mp3smiley {
+  position: absolute;
+  top: 657px;
+  right: 307px;
+  width: 9.1%;
+  height: auto;
+  z-index: 5;
+}
+
+#mp3smiley {
+  display: block;
+  transform-origin: center center;
+  will-change: transform;
+  animation: mp3spin 15s linear infinite;
+}
+
+@keyframes mp3spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #mp3smiley { animation: none; }
+}
+
+#homebtn {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  width: 8%;
+  height: 8%;
+  background-image:url(images/homebtn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.7s ease;
+}
+
+#homebtn:hover {
+  transform: scale(1.1);
+  cursor: url('images/wii-help-ccw.cur'), auto;
+}
+
+.menuindicator {
+  position: absolute;
+  top: 83px;
+  left: 830px;
+  font-family: Cascadia Mono;
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  z-index: 5;
+}
+
+
+
+.auge {
+  position: absolute;
+  width: 6%;
+  height: auto;
+  z-index: 6;
+  transition: all 0.7s ease;
+}
+
+.auge:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  cursor: url('images/wii-help-ccw.cur'), auto;
+}
+
+#augeL {
+  top: 400px;
+  left: 385px;
+  transition: all 0.7s ease;
+  cursor: url('images/wii-help-ccw.cur'), auto;
+}
+
+.textcount {
+  position: absolute;
+  top: 420px;
+  left: 497px;
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  z-index: 7;
+}
+
+#augeR {
+  top: 430px;
+  left: 540px;
+}
+
+.sprechi1 {
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi2 {
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi3 {
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  width: 53%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* adjust to match image */
+
+  background-image: url("images/sprechi3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Cascadia Mono';
+  font-size: 20px;
+}
+
+.sprechi1,
+.sprechi2,
+.sprechi3 {
+  display:none;
+  padding: 6% 5% 5% 5%; /* INSIDE padding */
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+.sprechi-active {
+  display: block;
+}
+
+#rahmen {
+  position: absolute;
+  background-image: url(images/rahmen.png) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+/* Fullscreen support for rahmen */
+#rahmen:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#rahmen:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+#rahmen:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Fade-out helper: transition opacity then hide in JS */
+.fade-out {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.imageicon {
+  position: absolute;
+  width: 100px;
+  height: 120px;
+  z-index: 5;
+  border-radius: 18%;
+  transition: all 0.7s ease;
+}
+
+#imageicon1 {
+  top: 140px;
+  right: 560px;
+}
+
+#imageicon2 {
+  top: 160px;
+  right: 430px;
+}
+
+#imageicon3 {
+  top: 130px;
+  right: 300px;
+}
+
+#imageicon4 {
+  top: 170px;
+  right: 170px;
+}
+
+#imageicon5 {
+  top: 200px;
+  right: 500px;
+}
+
+#imageicon6 {
+  top: 250px;
+  right: 370px;
+}
+
+#imageicon7 {
+  top: 220px;
+  right: 240px;
+}
+
+#imageicon8 {
+  top: 300px;
+  right: 550px;
+}
+
+#imageicon9 {
+  top: 330px;
+  right: 420px;
+}
+
+#imageicon1:hover,
+#imageicon2:hover,
+#imageicon3:hover,
+#imageicon4:hover,
+#imageicon5:hover,
+#imageicon6:hover,
+#imageicon7:hover,
+#imageicon8:hover,
+#imageicon9:hover {
+  cursor: url('images/wii-help-ccw.cur'), auto;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a glow effect on hover */
+}
+
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18%;
+}
+
+#imagescontainer {
+  position: absolute;
+  top: 1000px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top left;
+  justify-content: top;
+  z-index: 1; /* Ensure it appears above other content */
+  overflow-x: hidden;
+}
+
+.imgbelow {
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: contain;
+  transition: all 0.7s ease;
+}
+
+#credits {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  font-family: Cascadia Mono;
+  font-size: 14px;
+  color: #9aeadb;
+  z-index: 1;
+}
+
+#txt1 {
+  position: absolute;
+  top: 300px;
+  left: 850px;
+  font-family: 'Cascadia Mono';
+  font-size: 12px;
+  color: #00604f;
+  z-index: 8;
+}
+
+#txt3 {
+  position: absolute;
+  top: 330px;
+  left: 850px;
+  font-family: 'Cascadia Mono';
+  font-size: 12px;
+  color: #00604f;
+  z-index: 8;
+}
