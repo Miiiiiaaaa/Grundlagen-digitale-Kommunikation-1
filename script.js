@@ -532,6 +532,16 @@ updateCounter(currentSprechiIndex);
       fixstuffVideo.muted = !fixstuffVideo.muted;
     });
   }
+
+  window.addEventListener("click", startMusicOnce, { once: true });
+window.addEventListener("keydown", startMusicOnce, { once: true });
+
+function startMusicOnce() {
+  const bgm = document.getElementById("fahhhhbgm");
+  if (bgm) {
+    bgm.play().catch(() => {});
+  }
+}
 });
 
 
