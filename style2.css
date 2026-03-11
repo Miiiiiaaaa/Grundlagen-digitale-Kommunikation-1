@@ -397,8 +397,9 @@ body {
 }
 
 #mp3next:hover {
-  cursor: url('../images/wii-pointer-blue-ccw.cur') 8 8, auto;
+  cursor: url('images/wii-pointer-blue-ccw.cur') 8 8, auto;
 }
+
 
 
 
