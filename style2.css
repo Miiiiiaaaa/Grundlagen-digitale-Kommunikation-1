@@ -131,6 +131,7 @@ body {
   font-family: 'Cascadia Mono';
   font-size: 20px;
   color: rgb(0, 0, 0);
+  text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 20px;
   z-index: 7;
 }
 
@@ -158,6 +159,7 @@ body {
 
   font-family: 'Cascadia Mono';
   font-size: 20px;
+  text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 20px;
 }
 
 .sprechi2 {
@@ -179,6 +181,7 @@ body {
 
   font-family: 'Cascadia Mono';
   font-size: 20px;
+  text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 20px;
 }
 
 .sprechi3 {
@@ -200,6 +203,7 @@ body {
 
   font-family: 'Cascadia Mono';
   font-size: 20px;
+  text-shadow: white 0px 0px 5px, white 0px 0px 10px, white 0px 0px 20px;
 }
 
 .sprechi1,
@@ -399,5 +403,4 @@ body {
 #mp3next:hover {
   cursor: url('../images/wii-pointer-blue-ccw.cur') 8 8, auto;
 }
-
 
