@@ -542,6 +542,12 @@ function startMusicOnce() {
     bgm.play().catch(() => {});
   }
 }
+function startMusicOnce() {
+  const avatarvid = document.getElementById("avatar");
+  if (avatarvid) {
+    bgm.play().catch(() => {});
+  }
+}
 });
 
 
@@ -806,4 +812,5 @@ function newColour() {
 	c.sort(function(){return (0.5 - Math.random());});
 	return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
 };
+
 
