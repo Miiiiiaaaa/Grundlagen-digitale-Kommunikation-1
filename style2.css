@@ -147,7 +147,7 @@ body {
   height: auto;
   aspect-ratio: 3 / 2; /* adjust to match image */
 
-  background-image: url("../images/sprechi1.png");
+  background-image: url("images/sprechi1.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -168,7 +168,7 @@ body {
   height: auto;
   aspect-ratio: 3 / 2; /* adjust to match image */
 
-  background-image: url("../images/sprechi2.png");
+  background-image: url("images/sprechi2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -189,7 +189,7 @@ body {
   height: auto;
   aspect-ratio: 3 / 2; /* adjust to match image */
 
-  background-image: url("../images/sprechi3.png");
+  background-image: url("images/sprechi3.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -399,4 +399,5 @@ body {
 #mp3next:hover {
   cursor: url('../images/wii-pointer-blue-ccw.cur') 8 8, auto;
 }
+
 
