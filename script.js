@@ -369,7 +369,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon1Btn) {
     imageicon1Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img1below
       const img1belowEl = document.getElementById('img1below');
       if (img1belowEl) {
@@ -383,7 +386,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon2Btn) {
     imageicon2Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img2below
       const img2belowEl = document.getElementById('img2below');
       if (img2belowEl) {
@@ -406,7 +412,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon3Btn) {
     imageicon3Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img3below
       const img3belowEl = document.getElementById('img3below');
       if (img3belowEl) {
@@ -434,7 +443,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon5Btn) {
     imageicon5Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img5below
       const img5belowEl = document.getElementById('img5below');
       if (img5belowEl) {
@@ -448,7 +460,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon6Btn) {
     imageicon6Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img6below
       const img6belowEl = document.getElementById('img6below');
       if (img6belowEl) {
@@ -476,7 +491,10 @@ updateCounter(currentSprechiIndex);
   if (imageicon8Btn) {
     imageicon8Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img8below
       const img8belowEl = document.getElementById('img8below');
       if (img8belowEl) {
@@ -490,12 +508,28 @@ updateCounter(currentSprechiIndex);
   if (imageicon9Btn) {
     imageicon9Btn.addEventListener('click', function (e) {
       e.preventDefault();
-      if (imgiconsfx) imgiconsfx.play();
+      if (imgiconsfx) {
+        imgiconsfx.currentTime = 0;
+        imgiconsfx.play();
+      }
       // Scroll to img9below
       const img9belowEl = document.getElementById('img9below');
       if (img9belowEl) {
         img9belowEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+    });
+  }
+
+  // MP3Next toggle for semesterreflexion page
+  const mp3nextBtn = document.getElementById('mp3next');
+  const fahhhhbgmAudio = document.getElementById('fahhhhbgm');
+  const fixstuffVideo = document.getElementById('fixstuff');
+
+  if (mp3nextBtn && fahhhhbgmAudio && fixstuffVideo) {
+    mp3nextBtn.addEventListener('click', function () {
+      // Toggle mute states
+      fahhhhbgmAudio.muted = !fahhhhbgmAudio.muted;
+      fixstuffVideo.muted = !fixstuffVideo.muted;
     });
   }
 });
@@ -762,3 +796,4 @@ function newColour() {
 	c.sort(function(){return (0.5 - Math.random());});
 	return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
 };
+
